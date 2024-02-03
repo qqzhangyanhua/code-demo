@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "35344412",
+      "name": "经营计划",
+      "font_class": "jingyingjihua",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    }
+  ]
+}
