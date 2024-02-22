@@ -9,13 +9,18 @@ import {
   Request,
   Query,
 } from '@nestjs/common';
+import { BusinessException } from 'src/common/exceptions/business.exception';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './entities/user.entity';
+import { ConfigService } from '@nestjs/config';
 @Controller('user')
 export class UserController {
-  constructor(private readonly userService: UserService) {}
+  constructor(
+    private readonly userService: UserService,
+    private readonly configService: ConfigService,
+  ) {}
 
   @Post()
   create(@Body() createUserDto: CreateUserDto) {
@@ -24,6 +29,9 @@ export class UserController {
 
   @Get('list')
   getList(): Promise<User[]> {
+    console.log('------------', this.configService.get('TEST_VALUE'));
+
+    // throw new BusinessException('你这个参数错了');
     return this.userService.getList();
   }
   // 通过id查询用户
