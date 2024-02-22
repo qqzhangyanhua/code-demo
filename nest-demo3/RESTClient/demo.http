@@ -1,5 +1,0 @@
-GET http://localhost:3003/user/list
-
-###
-
-GET www.baidu.com HTTP/1.1
