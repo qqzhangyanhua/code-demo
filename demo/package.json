@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite50"
+    "dev": "vite50",
+    "debug": "vite50"
   },
   "keywords": [],
   "author": "",
