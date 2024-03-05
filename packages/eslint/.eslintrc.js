@@ -6,7 +6,7 @@ module.exports = {
     node: true,
   },
 //   "plugin:@typescript-eslint/recommended"
-  extends: ["eslint:recommended",], // 继承后就可以使用别人写好的规则
+  // extends: ["eslint:recommended",], // 继承后就可以使用别人写好的规则
   overrides: [
     {
       env: {
@@ -25,10 +25,14 @@ module.exports = {
   rules: {
     quotes: ["error", "double"],
   },
-  // ts解析器
-  plugins:[
-    "@typescript-eslint/eslint-plugin"
-  ],
+  // // ts解析器
+  // plugins:[
+  //   "@typescript-eslint/eslint-plugin"
+  // ],
+  plugins:["z-lint"],
+  rules: {
+    "z-lint/no-var": "error",
+  },
   parser: "@typescript-eslint/parser",
   globals: {
     custom: "writable", // 全局变量
