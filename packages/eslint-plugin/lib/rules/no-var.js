@@ -20,12 +20,13 @@ module.exports = {
     fixable: "code", // Or `code` or `whitespace`
     schema: [], // Add a schema if the rule has options
     messages: {
-      unexpected: "不能用var声明变量-{{type}}, use let or const instead",
+      unexpected: "不能用{{type}}声明变量",
     },
   },
 
   create(context) {
     const sourceCode = context.getSourceCode();
+  
     return {
       VariableDeclaration(node) {
         if (node.kind === "var") {
