@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "changelog": "conventional-changelog -p angular -i Changelog.md -s"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/core": "^7.24.0",
     "@babel/types": "^7.24.0",
+    "conventional-changelog": "^5.1.0",
     "escodegen": "^2.1.0",
     "esprima": "^4.0.1",
     "estraverse": "^5.3.0"
